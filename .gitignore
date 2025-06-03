@@ -1,0 +1,14 @@
+# Node & React
+node_modules
+client/build
+
+# Python & Flask
+__pycache__/
+*.pyc
+venv
+.env
+.env.*
+
+# System
+.DS_Store
+*.log
