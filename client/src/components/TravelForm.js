@@ -127,7 +127,7 @@ const TravelForm = () => {
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
     <p>אהבת את הרעיון? תוכל לתמוך בפיתוח 🙏</p>
     <a
-      href="https://www.buymeacoffee.com/galdev" // החלף בקישור שלך
+      href="https://link.payboxapp.com/p1Tk8oVsbqHzSdS27" // החלף בקישור שלך
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -207,7 +207,7 @@ const TravelForm = () => {
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
         <p>אם התכנון עזר לך – אתה מוזמן לתמוך 💙</p>
         <a
-          href="https://www.buymeacoffee.com/galdev"
+          href="https://link.payboxapp.com/p1Tk8oVsbqHzSdS27"
           target="_blank"
           rel="noopener noreferrer"
           style={{
