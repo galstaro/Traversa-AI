@@ -12,6 +12,13 @@ const TravelForm = () => {
 
   const [itinerary, setItinerary] = useState('');
   const [loading, setLoading] = useState(false);
+  const calculateDays = (start, end) => {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    const diffTime = endDate - startDate;
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+    return diffDays + 1;
+  };
   const downloadItinerary = () => {
     const blob = new Blob([itinerary], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -32,6 +39,8 @@ const TravelForm = () => {
     'טיול קולינרי',
     'טיול מסיבות',
     'טיול צעירים',
+    'טיול יחיד',
+    'טיול כדורגל',
     'טיול חורף',
   ];
 
@@ -42,6 +51,11 @@ const TravelForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const days = calculateDays(formData.startDate, formData.endDate);
+    if (days > 14) {
+      alert("כרגע ניתן לתכנן טיול עד 14 ימים בלבד 🙏");
+      return;
+    }
     setLoading(true);
     setItinerary('');
 
