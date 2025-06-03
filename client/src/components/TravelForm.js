@@ -46,7 +46,7 @@ const TravelForm = () => {
     setItinerary('');
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/generate-itinerary', formData);
+      const response = await axios.post('https://traversa-ai.onrender.com/generate-itinerary', formData);
       setItinerary(response.data.itinerary);
     } catch (err) {
       setItinerary('אירעה שגיאה בשליפת התכנון');
